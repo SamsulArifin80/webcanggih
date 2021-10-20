@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="asset/js/jquery-3.6.0.min.js"></script>
+<script>
+$( document ).ready(function() {
+	$('nav.navbar').children('ul.nav').children('li').each(function(indexCount){
+		$(this).children('ul.dropdown').children('li').each(function(index){
+		});
+	});
+});
+</script>
+<style type="text/css"> 
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #F3F4F8;
+}
+
+ul.nav {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  max-width: 70%;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  background: #907dda;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+ul.nav > li {
+  position: relative;
+  flex-grow: 1;
+  flex-shrink: 0;
+  height: 60px;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 60px;
+  letter-spacing: 1px;
+  color: #e7e6f1;
+  cursor: pointer;
+}
+ul.nav > li:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+ul.nav > li:hover ul.dropdown {
+  visibility: visible;
+  transform: translate(0, 0);
+  opacity: 1;
+  z-index: 0;
+}
+ul.dropdown {
+  visibility: hidden;
+  display: flex;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  margin: 0;
+  padding: 5px 0 30px;
+  list-style: none;
+  color: #333;
+  background: #e5e4ea;
+}
+ul.dropdown > li {
+  font-size: 14px;
+  cursor: pointer;
+}
+ul.dropdown > li:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+</style>
+</head>
+<body>
+<nav class="navbar">
+	<ul class="nav">
+		<li>
+			Home
+			<ul class="dropdown">
+				<li>Menu 1</li>
+				<li>Menu 2</li>
+				<li>Menu 3</li>
+			</ul>
+		</li>
+		<li>
+			About
+			<ul class="dropdown">
+				<li>Menu 1</li>
+				<li>Menu 2</li>
+				<li>Menu 3</li>
+			</ul>			
+		</li>
+	</ul>
+</nav>	
+</body>
+</html>
